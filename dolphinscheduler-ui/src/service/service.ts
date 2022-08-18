@@ -22,7 +22,7 @@ import _ from 'lodash'
 import cookies from 'js-cookie'
 import router from '@/router'
 import utils from '@/utils'
-
+const token = '815067078d6cbc6a03341a0422b5223a'
 const userStore = useUserStore()
 
 /**
@@ -59,7 +59,10 @@ const baseRequestConfig: AxiosRequestConfig = {
 const service = axios.create(baseRequestConfig)
 
 const err = (err: AxiosError): Promise<AxiosError> => {
-  if (err.response?.status === 401 || err.response?.status === 504) {
+  if (
+    (err.response?.status === 401 || err.response?.status === 504) &&
+    !token
+  ) {
     userStore.setSessionId('')
     userStore.setUserInfo({})
     router.push({ path: '/login' })
@@ -72,6 +75,7 @@ service.interceptors.request.use((config: AxiosRequestConfig<any>) => {
   config.headers && (config.headers.sessionId = userStore.getSessionId)
   const language = cookies.get('language')
   config.headers = config.headers || {}
+  config.headers.token = token
   if (language) config.headers.language = language
 
   return config
