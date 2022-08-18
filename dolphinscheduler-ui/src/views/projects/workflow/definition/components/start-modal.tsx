@@ -321,7 +321,9 @@ export default defineComponent({
                   label={t('project.workflow.mode_of_dependent')}
                   path='complementDependentMode'
                 >
-                  <NRadioGroup v-model:value={this.startForm.complementDependentMode}>
+                  <NRadioGroup
+                    v-model:value={this.startForm.complementDependentMode}
+                  >
                     <NSpace>
                       <NRadio value={'OFF_MODE'}>
                         {t('project.workflow.close')}

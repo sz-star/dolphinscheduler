@@ -15,14 +15,7 @@
  * limitations under the License.
  */
 
-import {
-  defineComponent,
-  PropType,
-  toRefs,
-  onMounted,
-  ref,
-  Ref,
-} from 'vue'
+import { defineComponent, PropType, toRefs, onMounted, ref, Ref } from 'vue'
 import { NForm, NFormItem, NInput, NSelect, NInputNumber } from 'naive-ui'
 import { useForm } from '../use-form'
 import Modal from '@/components/modal'

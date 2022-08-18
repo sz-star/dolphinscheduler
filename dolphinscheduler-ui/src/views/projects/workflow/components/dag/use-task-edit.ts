@@ -29,7 +29,6 @@ import type {
   EditWorkflowDefinition
 } from './types'
 
-
 interface Options {
   graph: Ref<Graph | undefined>
   definition: Ref<WorkflowDefinition | undefined>
