@@ -34,13 +34,13 @@ const components: { [key: string]: Component } = utils.mapping(modules)
  */
 const basePage: RouteRecordRaw[] = [
   {
-    path: '/vite/',
+    path: '/scheduler/',
     redirect: { name: 'home' },
     meta: { title: '首页' },
     component: () => import('@/layouts/content'),
     children: [
       {
-        path: '/vite/home',
+        path: '/scheduler/home',
         name: 'home',
         component: components['home'],
         meta: {
@@ -50,7 +50,7 @@ const basePage: RouteRecordRaw[] = [
         }
       },
       {
-        path: '/vite/password',
+        path: '/scheduler/password',
         name: 'password',
         component: components['password'],
         meta: {
@@ -59,7 +59,7 @@ const basePage: RouteRecordRaw[] = [
         }
       },
       {
-        path: '/vite/profile',
+        path: '/scheduler/profile',
         name: 'profile',
         component: components['profile'],
         meta: {
@@ -82,7 +82,7 @@ const basePage: RouteRecordRaw[] = [
  */
 const loginPage: RouteRecordRaw[] = [
   {
-    path: '/vite/login',
+    path: '/scheduler/login',
     name: 'login',
     component: components['login'],
     meta: {

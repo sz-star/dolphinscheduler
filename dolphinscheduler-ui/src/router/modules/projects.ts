@@ -23,7 +23,7 @@ const modules = import.meta.glob('/src/views/**/**.tsx')
 const components: { [key: string]: Component } = utils.mapping(modules)
 
 export default {
-  path: '/vite/projects',
+  path: '/scheduler/projects',
   name: 'projects',
   meta: {
     title: '项目管理'
@@ -32,7 +32,7 @@ export default {
   component: () => import('@/layouts/content'),
   children: [
     {
-      path: '/vite/projects/list',
+      path: '/scheduler/projects/list',
       name: 'projects-list',
       component: components['projects-list'],
       meta: {
@@ -43,7 +43,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode',
+      path: '/scheduler/projects/:projectCode',
       name: 'projects-overview',
       component: components['projects-overview'],
       meta: {
@@ -54,7 +54,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/relation',
+      path: '/scheduler/projects/:projectCode/workflow/relation',
       name: 'workflow-relation',
       component: components['projects-workflow-relation'],
       meta: {
@@ -65,7 +65,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow-definition',
+      path: '/scheduler/projects/:projectCode/workflow-definition',
       name: 'workflow-definition-list',
       component: components['projects-workflow-definition'],
       meta: {
@@ -76,7 +76,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow-definition/timing/:definitionCode',
+      path: '/scheduler/projects/:projectCode/workflow-definition/timing/:definitionCode',
       name: 'workflow-definition-timing',
       component: components['projects-workflow-definition-timing'],
       meta: {
@@ -88,7 +88,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/definitions/create',
+      path: '/scheduler/projects/:projectCode/workflow/definitions/create',
       name: 'workflow-definition-create',
       component: components['projects-workflow-definition-create'],
       meta: {
@@ -100,7 +100,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/definitions/:code',
+      path: '/scheduler/projects/:projectCode/workflow/definitions/:code',
       name: 'workflow-definition-detail',
       component: components['projects-workflow-definition-detail'],
       meta: {
@@ -112,7 +112,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/instances',
+      path: '/scheduler/projects/:projectCode/workflow/instances',
       name: 'workflow-instance-list',
       component: components['projects-workflow-instance'],
       meta: {
@@ -123,7 +123,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/instances/:id',
+      path: '/scheduler/projects/:projectCode/workflow/instances/:id',
       name: 'workflow-instance-detail',
       component: components['projects-workflow-instance-detail'],
       meta: {
@@ -135,7 +135,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow/instances/:id/gantt',
+      path: '/scheduler/projects/:projectCode/workflow/instances/:id/gantt',
       name: 'workflow-instance-gantt',
       component: components['projects-workflow-instance-gantt'],
       meta: {
@@ -147,7 +147,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/task/definitions',
+      path: '/scheduler/projects/:projectCode/task/definitions',
       name: 'task-definition',
       component: components['projects-task-definition'],
       meta: {
@@ -158,7 +158,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/task/instances',
+      path: '/scheduler/projects/:projectCode/task/instances',
       name: 'task-instance',
       component: components['projects-task-instance'],
       meta: {
@@ -169,7 +169,7 @@ export default {
       }
     },
     {
-      path: '/vite/projects/:projectCode/workflow-definition/tree/:definitionCode',
+      path: '/scheduler/projects/:projectCode/workflow-definition/tree/:definitionCode',
       name: 'workflow-definition-tree',
       component: components['projects-workflow-definition-tree'],
       meta: {

@@ -82,7 +82,7 @@ export function useTable() {
             ButtonLink,
             {
               onClick: () => {
-                router.push({ path: `/vite/projects/${row.code}` })
+                router.push({ path: `/scheduler/projects/${row.code}` })
               }
             },
             {
