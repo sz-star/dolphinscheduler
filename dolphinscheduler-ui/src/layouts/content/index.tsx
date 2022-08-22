@@ -31,6 +31,7 @@ const Content = defineComponent({
     window.$message = useMessage()
 
     const route = useRoute()
+    // console.log(route.path)
     const { locale } = useI18n()
     const localesStore = useLocalesStore()
     const routeStore = useRouteStore()

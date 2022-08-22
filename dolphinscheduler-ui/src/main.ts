@@ -37,3 +37,9 @@ app.use(router)
 app.use(pinia)
 app.use(i18n)
 app.mount('#app')
+
+if (window.__POWERED_BY_WUJIE__) {
+  window.__WUJIE_UNMOUNT = () => {
+    app.unmount()
+  }
+}
