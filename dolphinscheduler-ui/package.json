@@ -1,6 +1,7 @@
 {
   "name": "dolphinscheduler-ui",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build:prod": "vue-tsc --noEmit && vite build --mode production",
